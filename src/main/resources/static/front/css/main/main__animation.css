@@ -1,0 +1,19 @@
+.main__animation {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("	https://pokemonkorea.co.kr/img/main/sect_ani_bg.jpg");
+  background-repeat: no-repeat;
+
+  padding: 80px 0 100px;
+}
+
+.main__animation > h2 {
+  margin-bottom: 60px;
+
+  font-size: 50px;
+  font-weight: 700;
+
+  text-align: center;
+
+  color: white;
+}

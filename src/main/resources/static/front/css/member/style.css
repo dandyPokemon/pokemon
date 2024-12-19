@@ -1,0 +1,59 @@
+/* 회원가입, 로그인 공통 S */
+main {
+    background: #f7f7f7;
+    padding: 120px 0 280px;
+}
+/* 회원가입, 로그인 공통 E */
+
+/* 로그인 S */
+.login-box {
+    width: 470px;
+    margin: 0 auto;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.login-logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.row {
+    background: white;
+    padding: 10px 100px;
+    border: 1px solid black;
+}
+
+.input__box {
+  outline: none;
+  border: none;
+  font-size: 17px;
+  color: #6c757d;
+  width: 100%;
+}
+
+.links > a {
+    font-size: 15px;
+    color: #666
+}
+
+
+.login__button {
+  border: none;
+  background-color: #343a40;
+
+  width: 450px;
+  padding: 20px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+
+  transform: skew(-20deg);
+}
+
+/* 로그인 E */
