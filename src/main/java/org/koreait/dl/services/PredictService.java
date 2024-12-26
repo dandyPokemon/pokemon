@@ -1,7 +1,7 @@
-
 package org.koreait.dl.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
@@ -26,6 +26,14 @@ public class PredictService {
 
     @Autowired
     private ObjectMapper om;
+
+    @PostConstruct
+    public void init() {
+        System.out.println("runPath: " + runPath);
+        System.out.println("scriptPath: " + scriptPath);
+        System.out.println("dataUrl: " + dataUrl);
+        System.out.println("ObjectMapper injected: " + (om != null));
+    }
 
     public int[] predict(List<int[]> items) {
         try {
