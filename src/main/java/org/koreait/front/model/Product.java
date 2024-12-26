@@ -12,5 +12,4 @@ public class Product {
     private String productSubTitle;
     private String productImageUrl;
     private String productPageUrl;
-
 }
