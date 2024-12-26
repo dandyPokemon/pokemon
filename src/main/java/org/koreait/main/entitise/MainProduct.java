@@ -4,13 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class MainProduct {
-    private String header;
-    private List<Product> onlineStoreProducts;
-    private List<Product> licenseProducts;
+    private String title; // 제목
+    private String imageUrl; // 이미지
+    private String pageUrl; // 이동하는 a 태그 같은
 }

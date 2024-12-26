@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BaseModel {
-    private String title;
-    private String sub_title;
-    private String imageUrl;
-    private String pageUrl;
+    private String title; // 제목
+    private String sub_title; // 밑에 정보
+    private String imageUrl; // 이미지
+    private String pageUrl; // 이동하는 a 태그 같은
 }
