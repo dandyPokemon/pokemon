@@ -1,11 +1,13 @@
 *{
     margin: 0 ;
 }
-.news__game__list {
-    display: grid;
+.grid-layout{
+ display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);/* 3개의 열, 각각 1fr 비율 */
     grid-gap: 10px;
+    }
+.news__game__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
