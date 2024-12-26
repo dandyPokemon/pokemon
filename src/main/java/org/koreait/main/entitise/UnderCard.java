@@ -7,11 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Main {
-
+public class UnderCard {
     private String imageUrl;
-    private String mainTit;
-    private String infoText;
-    private String buttonText;
-    private String pageUrl;
+    private String buttonLabel;
+    private String title;
 }

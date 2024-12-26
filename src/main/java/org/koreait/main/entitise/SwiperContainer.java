@@ -7,11 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Main {
-
-    private String imageUrl;
-    private String mainTit;
-    private String infoText;
-    private String buttonText;
+public class SwiperContainer {
+    private String content;
     private String pageUrl;
-}
+    private String imageUrl;
+}gi

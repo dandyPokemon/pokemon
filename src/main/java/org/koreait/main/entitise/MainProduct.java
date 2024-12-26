@@ -4,14 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Main {
-
-    private String imageUrl;
-    private String mainTit;
-    private String infoText;
-    private String buttonText;
-    private String pageUrl;
+public class MainProduct {
+    private String header;
+    private List<Product> onlineStoreProducts;
+    private List<Product> licenseProducts;
 }

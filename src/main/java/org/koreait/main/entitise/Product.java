@@ -7,11 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Main {
-
+public class Product {
     private String imageUrl;
-    private String mainTit;
-    private String infoText;
-    private String buttonText;
-    private String pageUrl;
+    private String title;
+    private String link;
 }
