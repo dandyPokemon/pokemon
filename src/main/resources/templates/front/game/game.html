@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -8,8 +9,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
-    <script src="/js/game/game.js" defer></script>
+    <link rel="stylesheet" th:href="@{/front/css/game/game_news.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/game/game.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/game/game__top.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/game/game__gift.css}" />
+    <script th:src="@{front/js/game/game.js}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>

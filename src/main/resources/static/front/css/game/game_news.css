@@ -1,6 +1,4 @@
-*{
-    margin: 0 ;
-}
+
 .grid-layout{
  display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -8,6 +6,7 @@
     grid-gap: 10px;
     }
 .news__game__list {
+list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

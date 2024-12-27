@@ -5,10 +5,11 @@ import org.koreait.global.libs.Utils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
-@RequestMapping("/game")
+
 @Controller
 @RequiredArgsConstructor
 public class GameController {
@@ -19,7 +20,8 @@ public class GameController {
 
 
 
-
+        List<String> jsFiles = List.of("/front/js/game/game.js");
+        model.addAttribute("jsFiles", jsFiles);
 
 
 
