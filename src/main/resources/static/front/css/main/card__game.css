@@ -11,6 +11,7 @@
 }
 
 .card__game__container {
+  display: flex;
   max-width: 1250px;
   margin: 0 auto;
   width: 1248px;
@@ -19,6 +20,8 @@
 
 .card__game__content {
   display: flex;
+
+  justify-content: center;
   gap: 100px;
 
   width: 100%;
@@ -61,14 +64,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 212px;
   height: 55px;
+
   background-image: linear-gradient(#fff, #fff),
     linear-gradient(to left, #55bcb5, #85c083, #bec449, #f7c90e);
   background-origin: border-box;
   background-clip: content-box, border-box;
   border: 4px solid transparent;
+
   margin: 0 auto;
+
   background-color: white;
   transform: skew(-20deg);
 }

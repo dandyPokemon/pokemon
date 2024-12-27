@@ -6,6 +6,8 @@ import org.koreait.front.common.BaseModel;
 import org.koreait.global.libs.Utils;
 import org.koreait.main.entitise.MainGame;
 import org.koreait.main.entitise.MainProduct;
+import org.koreait.main.entitise.MainSwiper;
+import org.koreait.main.entitise.MainVideo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +34,7 @@ public class MainController {
 
         // NewNews
         List<BaseModel> newNews = new ArrayList<>();
-        newNews.add(new BaseModel("2025 코리안리그 시즌2 개최!", "카드 게임 | 2024년 12월 20일", "https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-20_15-28-59-94665-1734676139.jpg", "https://pokemonkorea.co.kr/koreanleague_2025/menu541"));
+        newNews.add(new BaseModel("2025 코리안리그 시즌2 개최!", "카드 게임 | 2024년 12월 20일", "https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-12_18-56-33-52636-1733997393.png", "https://pokemonkorea.co.kr/koreanleague_2025/menu541"));
         model.addAttribute("newNews", newNews);
 
         // MainGame
@@ -49,6 +51,15 @@ public class MainController {
         List<BaseModel> mainUnder = new ArrayList<>();
         mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
         model.addAttribute("mainUnder", mainUnder);
+
+
+        List<MainSwiper> mainSwiper = new ArrayList<>();
+        mainSwiper.add(new MainSwiper("https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-20_15-27-47-59212-1734676067.jpg", "https://pokemonkorea.co.kr/koreanleague_2025/menu541"));
+        model.addAttribute("mainSwiper", mainSwiper);
+
+        List<MainVideo> mainVideo = new ArrayList<>();
+        mainVideo.add(new MainVideo("https://www.youtube.com/embed/eJWz1Wr7lEM?si=6cPI2uAH5aY4oJlY"));
+        model.addAttribute("mainVideo", mainVideo);
 
         // utils.tpl("main/index") 로 템플릿 경로 반환
         return utils.tpl("main/index");
