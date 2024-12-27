@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +8,12 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="css/product.css" />
-    <link rel="stylesheet" href="../common/reset.css" />
-    <link rel="stylesheet" href="css/news.css" />
-    <link rel="stylesheet" href="css/top.css" />
+    <link rel="stylesheet" th:href="@{/front/css/product/product.css}" />
+    <link rel="stylesheet" th:href="@{/front/js/common/reset.css" />
+    <link rel="stylesheet" th:href="@{/front/css/product/news.css}" />
+    <link rel="stylesheet" th:href="@{/front/css/product/top.css}" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/product.js" defer></script>
+    <script th:src="@{/front/js/product/product.js}" defer></script>
 </head>
 <body>
 <main>
@@ -123,22 +123,22 @@
     <section class="news">
         <div class="news__container">
             <h2 class="news__title">새로운 소식</h2>
-            <div class="grid-layout">
+            <div class="grid-layout" th:each="productNewsList : ${productNewsList}">
                 <a
-                        href="https://e.kakao.com/t/happy-happyyy-jammanbo?lang=ko&referer=co_mkt"
+                        th:href="${productNewsList.pageUrl}"
                 >
                     <article class="card">
                         <div class="card__album">
                             <img
                                     class="card__album__img"
-                                    src="https://data1.pokemonkorea.co.kr/newdata/2024/07/2024-07-31_12-01-55-44458-1722394915.png"
+                                    th:src="${productNewsList.imageUrl}"
                                     alt=""
                             />
                         </div>
                         <div class="card__text">
-                            <div class="card__title">해피햅삐 잠만보 이모티콘 출시!!</div>
+                            <div class="card__title" th:text="${productNewsList.title}">해피햅삐 잠만보 이모티콘 출시!!</div>
                             <div class="card__sub">
-                                <span class="card__sub__date">2024년 07월 31일</span>
+                                <span class="card__sub__date" th:text="${productNewsList.sub_title}">2024년 07월 31일</span>
                                 <button class="card__sub__button">
                                     <img
                                             class="card__sub__button__img"
@@ -358,23 +358,25 @@
             </a>
         </div>
     </section>
+    <!-- 상품페이지 - 새로운 소식 E -->
 
+    <!-- 상품페이지 - 상품목록 S -->
     <section class="product">
         <div class="product__container">
-            <ul class="product__list">
+            <ul class="product__list" th:each="productGoodsList : ${productGoodsList}">
                 <div class="product__card">
                     <a
-                            href="https://pokemonkorea.co.kr/goods/view/15455"
+                            th:href="${productGoodsList.productPageUrl}"
                             target="_self"
                             class="product__card__image"
                     >
                         <img
-                                src="https://data1.pokemonkorea.co.kr/newdata/2024/11/2024-11-21_13-47-51-31339-1732164471.jpg"
+                                th:src="${productGoodsList.productImageUrl}"
                                 alt=""
                         />
                         <div class="product__title">
-                            <small class="product__title__theme">식품 및 기타</small>
-                            <div class="product__title__text">
+                            <small class="product__title__theme" th:text="${productGoodsList.productSubTitle}">식품 및 기타</small>
+                            <div class="product__title__text" th:text="${productGoodsList.productTitle}">
                                 [성수미술관] 포켓몬 도안
                             </div>
                         </div>
@@ -599,6 +601,7 @@
             </a>
         </div>
     </section>
+    <!-- 상품페이지 - 상품목록 S -->
 </main>
 </body>
 </html>
