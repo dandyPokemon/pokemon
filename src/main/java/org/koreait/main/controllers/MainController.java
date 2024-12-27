@@ -1,13 +1,12 @@
 package org.koreait.main.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.users.SparseUserDatabase;
 import org.koreait.front.common.BaseModel;
 import org.koreait.global.libs.Utils;
+import org.koreait.main.entitise.MainAnimation;
 import org.koreait.main.entitise.MainGame;
 import org.koreait.main.entitise.MainProduct;
 import org.koreait.main.entitise.MainSwiper;
-import org.koreait.main.entitise.MainVideo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,6 +46,12 @@ public class MainController {
         mainProduct.add(new MainProduct("포켓몬 스토어 「팬텀」 키캡",  "https://data1.pokemonkorea.co.kr/newdata/2024/10/2024-10-17_17-24-07-17384-1729153447.png", "https://pokemonstore.co.kr/pages/product/view.html?productNo=123486536&preview=true"));
         model.addAttribute("mainProduct", mainProduct);
 
+
+        List<MainAnimation> mainAnimation = new ArrayList<>();
+        mainAnimation.add(new MainAnimation("TV 애니메이션 포켓몬스터」테라스탈 데뷔 절찬 방영 중",  "https://data1.pokemonkorea.co.kr/newdata/2024/11/2024-11-20_15-01-23-30520-1732082483.png", "https://pokemonkorea.co.kr/pokemonLR"));
+        model.addAttribute("mainAnimation", mainAnimation);
+
+
         // MainUnder
         List<BaseModel> mainUnder = new ArrayList<>();
         mainUnder.add(new BaseModel("「 Pokémon UNITE」", "게임", "https://data1.pokemonkorea.co.kr/newdata/2021/08/2021-08-23_13-11-29-34893-1629691889.png", "https://pokemonkorea.co.kr/pokemon-unite"));
@@ -57,9 +62,7 @@ public class MainController {
         mainSwiper.add(new MainSwiper("https://data1.pokemonkorea.co.kr/newdata/2024/12/2024-12-20_15-27-47-59212-1734676067.jpg", "https://pokemonkorea.co.kr/koreanleague_2025/menu541"));
         model.addAttribute("mainSwiper", mainSwiper);
 
-        List<MainVideo> mainVideo = new ArrayList<>();
-        mainVideo.add(new MainVideo("https://www.youtube.com/embed/eJWz1Wr7lEM?si=6cPI2uAH5aY4oJlY"));
-        model.addAttribute("mainVideo", mainVideo);
+
 
         // utils.tpl("main/index") 로 템플릿 경로 반환
         return utils.tpl("main/index");
