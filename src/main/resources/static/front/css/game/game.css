@@ -1,8 +1,7 @@
-*{
-    margin: 0   ;
-}
+
 /* 전체 게임 리스트 항목 */
 .game__list {
+list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,7 +20,6 @@
 }
 /* 각 게임 항목 (li) */
 .li__list {
-
     display: flex;
     flex-direction: column;
     position: relative;
