@@ -8,6 +8,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" th:href="@{/front/css/style.css}">
     <link rel="stylesheet" th:href="@{/front/css/product/product.css}" />
     <link rel="stylesheet" th:href="@{/front/css/common/reset.css}" />
     <link rel="stylesheet" th:href="@{/front/css/product/news.css}" />
@@ -18,6 +19,8 @@
 </head>
 <body>
 <main>
+    <header th:replace="~{front/outlines/_header::common}"></header>
+
     <section class="product__top">
         <!-- Swiper -->
         <div class="swiper">
@@ -602,7 +605,10 @@
             </a>
         </div>
     </section>
-    <!-- 상품페이지 - 상품목록 S -->
+    <!-- 상품페이지 - 상품목록 E -->
+
+    <footer th:replace="~{front/outlines/_footer::common}"></footer>
+
 </main>
 </body>
 </html>
