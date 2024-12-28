@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>애니메이션</title>
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -13,7 +13,7 @@
     <link rel="stylesheet" th:href="@{/front/css/animation/animation__top.css}" />
     <link rel="stylesheet" th:href="@{/front/css/animation/animation__under.css}" />
     <link rel="stylesheet" th:href="@{/front/css/animation/animation__video.css}" />
-    <script src="@{/front/js/animation/animation.js}" defer></script>
+    <script th:src="@{/front/js/animation/animation.js}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -139,7 +139,7 @@
                             <p th:text="${animationNewList.next_title}">2024년 12월 12일</p>
                             <button class="animation__btn">
                                 <img
-                                        th:src="${productNewsList.sub_image}"
+                                        th:src="${animationNewList.sub_image}"
                                         alt=""
                                 />
                             </button>
