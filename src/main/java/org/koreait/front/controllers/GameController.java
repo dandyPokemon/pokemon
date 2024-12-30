@@ -11,6 +11,6 @@ public class GameController {
     private final Utils utils;
     @GetMapping("/game")
     public String game(){
-        return utils.tpl("game/game");
+        return utils.tpl("game");
     }
 }
