@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequiredArgsConstructor
 public class GameController {
     private final Utils utils;
-    @GetMapping("/game")
+    @GetMapping("game/game")
     public String game(){
-        return utils.tpl("game");
+        return utils.tpl("game/game");
     }
 }
