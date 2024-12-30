@@ -95,11 +95,11 @@ header .main-menu > li:nth-of-type(5) a:hover i {
     background: url("../images/icon_ball_w.png") no-repeat center center;
 }
 
-header > .left { display: flex; flex-grow: 1; }
+header > .left { display: flex; flex-grow: 1;}
 header > .left .logo { max-width: 350px; min-width: 250px; display: flex; align-items: center; justify-content: center; }
 
 header .main-menu .icon {
-    display: block;
+   display: block;
     width: 31px;
     height: 27px;
     margin: 0 auto;
@@ -147,7 +147,7 @@ header .icon.search {
 
 header > .right {
     display: flex;
-    width: 520px;
+    width: 525px;
     justify-content: flex-end;
 }
 
